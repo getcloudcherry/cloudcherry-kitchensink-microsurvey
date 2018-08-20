@@ -1,0 +1,9 @@
+<div style="padding: 5px">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span>{{title}} Demo</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <iframe *ngIf="url != null" style="height:500px; width: 100%" [src]="getIframeURL()"></iframe>
+  <span *ngIf="url == null">No demo available</span>
+</div>

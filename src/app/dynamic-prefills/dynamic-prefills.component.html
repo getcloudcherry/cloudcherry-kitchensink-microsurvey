@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="toolbar-elevation">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <mat-card>
+      <mat-tab-group dynamicHeight="true">
+        <mat-tab label="Overview">
+          <ng-template matTabContent>
+            <div>
+              <h3>Prefill By Question Tag</h3>
+              <p> Dynamincally prefill the answers by Question tag </p>
+              <code>window.CCSDK("fillPrefill", token, questionTag, value);  </code>
+            </div>
+            <div>
+              <h3>Prefill By Question ID</h3>
+              <p> Dynamincally prefill the answers by Question ID </p>
+              <code>window.CCSDK("prefill", token, questionId, value);</code>
+            </div>
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Live Demo">
+          <ng-template matTabContent>
+            <app-live-demo [title]="title" [url]="url">
+            </app-live-demo>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

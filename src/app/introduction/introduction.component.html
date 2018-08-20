@@ -1,0 +1,33 @@
+<app-header [title]="title"></app-header>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <mat-card>
+      <div>
+        <h3>About</h3>
+        <p>Cloudcherry provides its clients the opportunity to reach out to its customers over 17 different channels. Microsurvey
+          is a channel used to reach out to customers to get feedback on the website when they are browsing through a section
+          on the site. Javascript is generated at CloudCherry which can be embedded on website to make the Microsurvey to
+          appear on the website at the right time to the customers. The Microsurvey pop out can be controlled by the client.
+          This document is intended to explain how to deploy Microsurvey and collect feedbacks from customers through website.
+        </p>
+      </div>
+      <div>
+        <h3>Microsurvey </h3>
+        <p>Microsurveys are context specific surveys that are asked at very specific instances of an experience on the website.
+          These are generally very short (2 to 3 questions) and uber context specific in nature.
+        </p>
+        <p>When a customer is browsing a web page, we can configure Microsurvey to appear on the page based on specific scenarios.
+        </p>
+        <p>The scenarios could be as simple as a customer browsing the product page for more than 120 seconds and browsed scroll
+          page is more than 70%. Then as a brand, its ideal to engage the customer and ask what he/she is looking for or
+          if there are any concerns causing a delay in taking an action. Another example could be a customer on a newly launched
+          product page and exploring the product by clicking on 2 or 3 images. Here it’s ideal for the brand to engage with
+          the customer and understand what the customer feels about the website itself and if there are any specific product
+          requirements delaying a decision. </p>
+      </div>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

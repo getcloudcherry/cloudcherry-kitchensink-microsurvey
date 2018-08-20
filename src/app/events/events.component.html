@@ -1,0 +1,80 @@
+<mat-toolbar color="primary" class="toolbar-elevation">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <mat-card>
+      <mat-tab-group>
+        <mat-tab label="Overview">
+          <div>
+            <p>SDK has 6 events that can be listened on for capturing analytics data Replace
+              <code>token</code> with the actual token number.</p>
+          </div>
+          <div>
+            <h3>onImpression </h3>
+            <p>Fired as soon as the survey is triggered </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+            &nbsp;&nbsp;e.detail.survey.on('onImpression', function(e) &#123;<br>
+            &nbsp;&nbsp;&nbsp;console.log('Impression');<br>
+            &nbsp;&nbsp;&#125;);<br>
+            &#125;); </code>
+          </div>
+          <div>
+            <h3>onQuestion </h3>
+            <p>Fired when a question is visible on screen </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+              &nbsp;&nbsp;e.detail.survey.on('onQuestion', function(e) &#123;<br>
+              &nbsp;&nbsp;&nbsp;console.log('Question Displayed');<br>
+              &nbsp;&nbsp;&#125;);<br>
+              &#125;); </code>
+          </div>
+          <div>
+            <h3>onAnswer </h3>
+            <p> Fired when a question is answered </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+                &nbsp;&nbsp;e.detail.survey.on('onAnswer', function(e) &#123;<br>
+                &nbsp;&nbsp;&nbsp;console.log('Question Answered');<br>
+                &nbsp;&nbsp;&#125;);<br>
+                &#125;); </code>
+          </div>
+          <div>
+            <h3>onClick </h3>
+            <p> Fired every time a click event happen on survey </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+                  &nbsp;&nbsp;e.detail.survey.on('onClick', function(e) &#123;<br>
+                  &nbsp;&nbsp;&nbsp;console.log('Clicked');<br>
+                  &nbsp;&nbsp;&#125;);<br>
+                  &#125;); </code>
+          </div>
+          <div>
+            <h3>onClose </h3>
+            <p> Fired when user closes the survey </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+                    &nbsp;&nbsp;e.detail.survey.on('onClose', function(e) &#123;<br>
+                    &nbsp;&nbsp;&nbsp;console.log('Closed');<br>
+                    &nbsp;&nbsp;&#125;);<br>
+                    &#125;); </code>
+          </div>
+          <div>
+            <h3>onEnd </h3>
+            <p>Fired when the survey ends </p>
+            <code>document.addEventListener(‘XX-XXX-ready', function(e)&#123;<br>
+                      &nbsp;&nbsp;e.detail.survey.on('onEnd', function(e) &#123;<br>
+                      &nbsp;&nbsp;&nbsp;console.log('Survey Ended');<br>
+                      &nbsp;&nbsp;&#125;);<br>
+                      &#125;); </code>
+          </div>
+        </mat-tab>
+        <mat-tab label="Live Demo">
+          <app-live-demo [title]="title" [url]="url">
+          </app-live-demo>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let menu of menuOptions">
+    <a [routerLink]="menu.path" [class]="title === menu.name ? 'active' : null" class="full-width">
+      <mat-icon matListIcon>{{menu.icon}} </mat-icon>
+      <span>
+        {{menu.name}}
+      </span>
+    </a>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>

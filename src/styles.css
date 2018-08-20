@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-toolbar.mat-primary{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+
+.toolbar-elevation{
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12)
+}
+
+.document-container{
+  top:64px;
+  padding-bottom: 20px;
+  height:100vh;
+  background-color: #fff;
+}
+
+.overview-container{
+  padding: 10px;
+  background-color: #eee;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 10px;
+}
+
+body{
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}

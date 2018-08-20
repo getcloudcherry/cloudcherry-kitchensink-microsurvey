@@ -1,0 +1,43 @@
+<app-header [title]="title"></app-header>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <mat-card>
+      <mat-tab-group dynamicHeight="true">
+        <mat-tab label="Overview">
+          <ng-template matTabContent>
+            <div>
+              <p>
+                SDK has 3 methods that can be used to trigger the survey, Replace
+                <code>token</code> with the actual token number.
+              </p>
+            </div>
+            <div>
+              <h3>Show</h3>
+              <p> To show the survey programatically use the show method as shown below </p>
+              <code>window.CCSDK(“show”, token); </code>
+            </div>
+            <div>
+              <h3>Hide</h3>
+              <p> To hide the survey programmatically use the hide method as shown below </p>
+              <code>window.CCSDK(“hide”, token);  </code>
+            </div>
+            <div>
+              <h3>Destroy</h3>
+              <p> To destroy the survey programmatically use the destroy method as shown Below </p>
+              <code>window.CCSDK(“destroy”, token);  </code>
+            </div>
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Live Demo">
+          <ng-template matTabContent>
+            <app-live-demo [title]="title" [url]="url">
+            </app-live-demo>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

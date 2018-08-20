@@ -1,0 +1,29 @@
+<app-header [title]="title"></app-header>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <ng-template ngFor let-trigger [ngForOf]="triggers">
+      <mat-card>
+        <h3>{{trigger.title}}</h3>
+        <div *ngIf="trigger.url != undefined">
+          <mat-tab-group>
+            <mat-tab label="Overview">
+              <div>
+                <p>{{trigger.description}}</p>
+              </div>
+            </mat-tab>
+            <mat-tab label="Live Demo">
+              <app-live-demo [title]="trigger.title" [url]="trigger.url">
+              </app-live-demo>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+        <div *ngIf="trigger.url == undefined">
+          <p>{{trigger.description}}</p>
+        </div>
+      </mat-card>
+    </ng-template>
+  </mat-sidenav-content>
+</mat-sidenav-container>

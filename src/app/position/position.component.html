@@ -1,0 +1,30 @@
+<app-header [title]="title"></app-header>
+<mat-sidenav-container class="document-container">
+  <mat-sidenav mode="side" style="height:100%;" opened>
+    <app-menu [title]="title"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="overview-container">
+    <mat-card>
+      <mat-tab-group dynamicHeight="true">
+        <mat-tab label="Overview">
+          <ng-template matTabContent>
+            <div>
+              <p> You can choose to show MicroSurvey on your desired position based on configuration. Available positions are
+                <code>Bottom Right</code>,
+                <code>Bottom Left</code>,
+                <code>Top Right</code> and
+                <code>Top Left</code>
+              </p>
+            </div>
+          </ng-template>
+        </mat-tab>
+        <mat-tab label="Live Demo">
+          <ng-template matTabContent>
+            <app-live-demo [title]="title" [url]="url">
+            </app-live-demo>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
