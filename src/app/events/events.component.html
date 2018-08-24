@@ -1,8 +1,4 @@
-<mat-toolbar color="primary" class="toolbar-elevation">
-  <mat-toolbar-row>
-    <span>{{title}}</span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-header [title]="title"></app-header>
 <mat-sidenav-container class="document-container">
   <mat-sidenav mode="side" opened>
     <app-menu [title]="title"></app-menu>
