@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import { IntroductionComponent } from './introduction/introduction.component';
 import { PositionComponent } from './position/position.component';
@@ -50,7 +50,7 @@ const routes: Routes = [
 @NgModule( {
   imports: [
     CommonModule,
-    RouterModule.forRoot( routes )
+    RouterModule.forRoot( routes, { useHash: true, preloadingStrategy: PreloadAllModules } )
   ],
   exports: [ RouterModule ],
   declarations: []
