@@ -12,12 +12,12 @@ export class MenuComponent implements OnInit {
       name: 'Introduction',
       path: '/intro',
       icon: 'home'
-    },
+    },/*
     {
       name: 'Position',
       path: '/position',
       icon: 'location_searching'
-    },
+    },*/
     {
       name: 'Methods',
       path: '/methods',
